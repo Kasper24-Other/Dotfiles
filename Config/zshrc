@@ -1,0 +1,38 @@
+# Alternative (blocks terminal for 0-3ms)
+cat /home/itsco/.config/wpg/sequences
+source ~/.cache/wal/colors-tty.sh
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd beep
+bindkey -e
+zstyle :compinstall filename '/home/itsco/.zshrc'
+autoload -Uz compinit
+compinit
+
+# Set name of the theme to load
+ZSH_THEME="agnoster"
+
+# Allow the use of any term over SSH
+export TERM='linux'
+
+# Path to your oh-my-zsh installation.
+export ZSH="/home/itsco/.oh-my-zsh"
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Load Plugins
+plugins=(
+	git
+	#zsh-autosuggestions
+	zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# Add PATH to pip files
+PATH=/home/itsco/.local/bin:$PATH
