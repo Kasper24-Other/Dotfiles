@@ -36,3 +36,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Add PATH to pip files
 PATH=/home/itsco/.local/bin:$PATH
+
+alias gamma="xrandr --output DP-2 --gamma"
