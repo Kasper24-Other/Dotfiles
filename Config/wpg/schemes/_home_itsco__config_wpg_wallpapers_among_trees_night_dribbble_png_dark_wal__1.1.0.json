@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/itsco/.config/wpg/wallpapers/among_trees_night_dribbble.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0A1235",
+        "foreground": "#ebc4c2",
+        "cursor": "#ebc4c2"
+    },
+    "colors": {
+        "color0": "#0A1235",
+        "color1": "#2B5B9E",
+        "color2": "#525BA3",
+        "color3": "#5F7BC1",
+        "color4": "#B26D8F",
+        "color5": "#4F9DC9",
+        "color6": "#41A0C5",
+        "color7": "#ebc4c2",
+        "color8": "#a48987",
+        "color9": "#2B5B9E",
+        "color10": "#525BA3",
+        "color11": "#5F7BC1",
+        "color12": "#B26D8F",
+        "color13": "#4F9DC9",
+        "color14": "#41A0C5",
+        "color15": "#ebc4c2"
+    }
+}

@@ -30,7 +30,7 @@ awful.screen.connect_for_each_screen(function(s)
             create_callback = function(self, tag, index, _)
                 self.align = "center"
                 self.valign = "center"
-                self.forced_width = dpi(25)
+                self.forced_width = dpi(50)
                 self.font = beautiful.taglist_text_font
 
                 update_taglist(self, tag, index)
@@ -47,9 +47,9 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Create a wibox that will only show the tray
     -- Hidden by default. Can be toggled with a keybind.
-    s.traybox = wibox({visible = false, ontop = true, shape = helpers.rrect(beautiful.border_radius), type = "dock"})
+    s.traybox = wibox({visible = true, ontop = true, shape = helpers.rrect(beautiful.border_radius), type = "dock"})
     s.traybox.width = dpi(120)
-    s.traybox.height = beautiful.wibar_height - beautiful.screen_margin * 4
+    s.traybox.height = 40 - beautiful.screen_margin * 4
     s.traybox.x = s.geometry.width - beautiful.screen_margin * 2 - s.traybox.width
     s.traybox.y = s.geometry.height - s.traybox.height - beautiful.screen_margin * 2
     -- s.traybox.y = s.geometry.height - s.traybox.height - s.traybox.height / 2
@@ -66,10 +66,10 @@ awful.screen.connect_for_each_screen(function(s)
             s.traybox.visible = false
         end)
     ))
-    -- Hide traybox when mouse leaves
-    s.traybox:connect_signal("mouse::leave", function ()
-        s.traybox.visible = false
-    end)
+    -- -- Hide traybox when mouse leaves
+    -- s.traybox:connect_signal("mouse::leave", function ()
+    --     s.traybox.visible = false
+    -- end)
 
     -- Create text weather widget
     local text_weather = require("noodle.text_weather")
@@ -110,28 +110,28 @@ awful.screen.connect_for_each_screen(function(s)
     minimize_button.font = "Typicons 11"
     minimize_button.markup = helpers.colorize_text("", x.color6)
 
-    local window_buttons = wibox.widget {
-        minimize_button,
-        maximize_button,
-        close_button,
-        { -- Padding
-            spacing = dpi(6),
-            layout = wibox.layout.fixed.horizontal
-        },
-        spacing = dpi(12),
-        layout = wibox.layout.fixed.horizontal
-    }
-    window_buttons:buttons(gears.table.join(
-        awful.button({ }, 2, function ()
-            awful.spawn.with_shell("rofi -matching fuzzy -show windowcd")
-        end),
-        awful.button({ }, 4, function ()
-            awful.client.focus.byidx(-1)
-        end),
-        awful.button({ }, 5, function ()
-            awful.client.focus.byidx(1)
-        end)
-    ))
+    -- local window_buttons = wibox.widget {
+    --     minimize_button,
+    --     maximize_button,
+    --     close_button,
+    --     { -- Padding
+    --         spacing = dpi(6),
+    --         layout = wibox.layout.fixed.horizontal
+    --     },
+    --     spacing = dpi(12),
+    --     layout = wibox.layout.fixed.horizontal
+    -- }
+    -- window_buttons:buttons(gears.table.join(
+    --     awful.button({ }, 2, function ()
+    --         awful.spawn.with_shell("rofi -matching fuzzy -show windowcd")
+    --     end),
+    --     awful.button({ }, 4, function ()
+    --         awful.client.focus.byidx(-1)
+    --     end),
+    --     awful.button({ }, 5, function ()
+    --         awful.client.focus.byidx(1)
+    --     end)
+    -- ))
 
     -- Create the wibox
     s.mywibox = awful.wibar({ position = beautiful.wibar_position, screen = s, width = beautiful.wibar_width, height = beautiful.wibar_height, shape = helpers.rrect(beautiful.wibar_border_radius)})

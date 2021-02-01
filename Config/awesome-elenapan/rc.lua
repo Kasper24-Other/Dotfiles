@@ -19,7 +19,7 @@ local themes = {
     "amarena",      -- 5 --
 }
 -- Change this number to use a different theme
-local theme = themes[5]
+local theme = themes[3]
 -- ===================================================================
 -- Affects the window appearance: titlebar, titlebar buttons...
 local decoration_themes = {
@@ -37,7 +37,7 @@ local bar_themes = {
     "ephemeral",    -- 4 -- Taglist, start button, tasklist, and more buttons
     "amarena",      -- 5 -- Minimal taglist and dock with autohide
 }
-local bar_theme = bar_themes[5]
+local bar_theme = bar_themes[3]
 
 -- ===================================================================
 -- Affects which icon theme will be used by widgets that display image icons.
@@ -58,7 +58,7 @@ local sidebar_themes = {
     "lovelace",       -- 1 -- Uses image icons
     "amarena",        -- 2 -- Text-only (consumes less RAM)
 }
-local sidebar_theme = sidebar_themes[2]
+local sidebar_theme = sidebar_themes[1]
 -- ===================================================================
 local dashboard_themes = {
     "skyfall",        -- 1 --
@@ -76,20 +76,22 @@ local exit_screen_theme = exit_screen_themes[2]
 user = {
     -- >> Default applications <<
     -- Check apps.lua for more
-    terminal = "kitty -1",
-    floating_terminal = "kitty -1",
+    terminal = "alacritty",
+    floating_terminal = "alacritty",
     browser = "firefox",
-    file_manager = "kitty -1 --class files -e ranger",
-    editor = "kitty -1 --class editor -e vim",
+    file_manager = "nemo",
+    editor = "code",
     email_client = "kitty -1 --class email -e neomutt",
     music_client = "kitty -o font_size=12 --class music -e ncmpcpp",
+    task_manager = "gnome-system-monitor",
 
     -- >> Web Search <<
     web_search_cmd = "xdg-open https://duckduckgo.com/?q=",
     -- web_search_cmd = "xdg-open https://www.google.com/search?q=",
 
     -- >> User profile <<
-    profile_picture = os.getenv("HOME").."/.config/awesome/profile.png",
+    --profile_picture = os.getenv("HOME").."/.config/awesome/profile.png",
+    profile_picture = os.getenv("HOME").."/Pictures/Profile/Jack-T.png",
 
     -- Directories with fallback values
     dirs = {
@@ -102,7 +104,6 @@ user = {
         -- are not lost
         screenshots = os.getenv("XDG_SCREENSHOTS_DIR") or "~/Pictures/Screenshots",
     },
-
     -- >> Sidebar <<
     sidebar = {
         hide_on_mouse_leave = true,
@@ -115,7 +116,7 @@ user = {
     -- as described in the README instructions
     -- Leave it empty in order to unlock with just the Enter key.
     -- lock_screen_custom_password = "",
-    lock_screen_custom_password = "awesome",
+    lock_screen_custom_password = "1",
 
     -- >> Battery <<
     -- You will receive notifications when your battery reaches these
@@ -127,25 +128,47 @@ user = {
     -- Get your key and find your city id at
     -- https://openweathermap.org/
     -- (You will need to make an account!)
-    openweathermap_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    openweathermap_city_id = "yyyyyy",
+    openweathermap_key = "ef62444aadceda2649cf3774516bd4b2",
+    openweathermap_city_id = "293703",
     -- > Use "metric" for Celcius, "imperial" for Fahrenheit
     weather_units = "metric",
 
     -- >> Coronavirus <<
     -- Country to check for corona statistics
     -- Uses the https://corona-stats.online API
-    coronavirus_country = "germany",
+    coronavirus_country = "israel",
+
+    startup_apps = {
+        "xrandr --output DP-2 --gamma 0.8",
+        "xset s off",
+        "xset -dpms",
+        "xset s noblank",
+        "xset r rate 200 30",
+
+        "lxqt-policykit-agent",
+        "picom --experimental-backends",
+        "nitrogen --set-tiled ~/.config/wpg/.current",
+        
+        "sudo cp /home/itsco/.config/wpg/.current /usr/share/backgrounds/gnome/wpgtk.jpg",
+        "convert /home/itsco/.config/wpg/.current /home/itsco/.config/wpg/.current.png",
+        "sudo cp /home/itsco/.config/wpg/.current.png /boot/efi/EFI/refind/themes/rEFInd-sunset/background.png",
+        "cd Dotfiles/Config/firefox/start_page && python -m http.server",
+        "cd Scripts && python ./orgb.py",
+        "cd Scripts && sh ./capslockfix.sh",
+        "cd Scripts && sh ./spotify.sh",
+        "wal_steam -w",
+        "pywalfox update"
+    }
 }
+
 -- ===================================================================
-
-
 -- Jit
 --pcall(function() jit.on() end)
 
 -- Initialization
 -- ===================================================================
 -- Theme handling library
+
 local beautiful = require("beautiful")
 local xrdb = beautiful.xresources.get_current_theme()
 -- Make dpi function global
@@ -174,11 +197,22 @@ x = {
 }
 
 -- Load AwesomeWM libraries
-local gears = require("gears")
 local awful = require("awful")
+local gears = require("gears")
 require("awful.autofocus")
 -- Default notification library
 local naughty = require("naughty")
+
+-- Run all the apps listed in run_on_start_up
+for _, app in ipairs(user.startup_apps) do
+    local findme = app
+    local firstspace = app:find(" ")
+    if firstspace then
+       findme = app:sub(0, firstspace - 1)
+    end
+    -- pipe commands to bash to allow command to be shell agnostic
+    awful.spawn.with_shell(string.format("echo 'pgrep -u $USER -x %s > /dev/null || (%s)' | bash -", findme, app), false)
+ end
 
 -- Load theme
 local theme_dir = os.getenv("HOME") .. "/.config/awesome/themes/" .. theme .. "/"
@@ -236,6 +270,7 @@ require("elemental.microphone_overlay")
 -- Make sure to initialize it last in order to allow all widgets to connect to
 -- their needed evil signals.
 require("evil")
+
 -- ===================================================================
 -- ===================================================================
 
@@ -286,7 +321,7 @@ local function set_wallpaper(s)
         --awful.spawn.with_shell("feh --bg-fill " .. wallpaper)
 
         -- >> Method 3: Set last wallpaper with feh
-        awful.spawn.with_shell(os.getenv("HOME") .. "/.fehbg")
+        --awful.spawn.with_shell(os.getenv("HOME") .. "/.fehbg")
     end
 end
 
@@ -306,16 +341,16 @@ awful.screen.connect_for_each_screen(function(s)
     local l = awful.layout.suit -- Alias to save time :)
     -- Tag layouts
     local layouts = {
-        l.max,
-        l.max,
-        l.max,
-        l.max,
         l.tile,
-        l.max,
-        l.max,
-        l.max,
         l.tile,
-        l.max
+        l.tile,
+        l.tile,
+        l.tile,
+        l.tile,
+        l.tile,
+        l.tile,
+        l.tile,
+        l.tile
     }
 
     -- Tag names
@@ -621,7 +656,7 @@ awful.rules.rules = {
     {
         rule_any = {
             class = {
-                "Nemo",
+                -- "Nemo",
                 "Thunar"
             },
         },
@@ -994,6 +1029,7 @@ awful.rules.rules = {
 }
 -- (Rules end here) ..................................................
 -- ===================================================================
+
 
 -- Signals
 -- ===================================================================

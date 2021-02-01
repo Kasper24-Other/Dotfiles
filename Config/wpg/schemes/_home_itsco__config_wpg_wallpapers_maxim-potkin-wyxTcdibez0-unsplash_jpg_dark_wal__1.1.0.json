@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/itsco/.config/wpg/wallpapers/maxim-potkin-wyxTcdibez0-unsplash.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#132d31",
+        "foreground": "#dff1ed",
+        "cursor": "#dff1ed"
+    },
+    "colors": {
+        "color0": "#132d31",
+        "color1": "#7CC5CF",
+        "color2": "#8CB7B5",
+        "color3": "#90D3D7",
+        "color4": "#A1DEDE",
+        "color5": "#B2E9E6",
+        "color6": "#C6E3DA",
+        "color7": "#dff1ed",
+        "color8": "#9ca8a5",
+        "color9": "#7CC5CF",
+        "color10": "#8CB7B5",
+        "color11": "#90D3D7",
+        "color12": "#A1DEDE",
+        "color13": "#B2E9E6",
+        "color14": "#C6E3DA",
+        "color15": "#dff1ed"
+    }
+}

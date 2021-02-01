@@ -6,17 +6,17 @@
  */
 
 :root {
-  --bg: #0E1F35;
-  --bgDarker: #0E1F35; // for secondary menus and variation
-  --colorUrgent: #5CAFD6; // for new messages, notifications and urgent prompts
-  --colorAccent: #3473AC; // primary colour for accenting details
-  --colorHighlight: #447BA2; // for highlighting and complementing the accent color
-  --fg: #c6e0e8; // text color
+  --bg: #0a0731;
+  --bgDarker: #0a0731; // for secondary menus and variation
+  --colorUrgent: #573eff; // for new messages, notifications and urgent prompts
+  --colorAccent: #3b2bd3; // primary colour for accenting details
+  --colorHighlight: #d54343; // for highlighting and complementing the accent color
+  --fg: #aeacff; // text color
 
   // additional colors for syntax highlight variation
-  --syntaxOne: #4A8DB7;
-  --syntaxTwo: #4894C7;
-  --syntaxThree: #59AAD2;
+  --syntaxOne: #401ff4;
+  --syntaxTwo: #5037fb;
+  --syntaxThree: #4b20ff;
 }
 
 .messages-3amgkR {

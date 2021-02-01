@@ -123,7 +123,7 @@ theme.separator_fg = x.color8
 -- Wibar(s)
 theme.wibar_position = "bottom"
 theme.wibar_ontop = false
-theme.wibar_height = dpi(35)
+theme.wibar_height = dpi(60)
 theme.wibar_fg = x.color7
 theme.wibar_bg = x.color0
 --theme.wibar_opacity = 0.7
@@ -252,7 +252,7 @@ for i = 1, ntags do
 end
 
 -- Noodle Text Taglist
-theme.taglist_text_font = "Typicons 11"
+theme.taglist_text_font = "Typicons 15"
 theme.taglist_text_empty    = {"","","","","","","","","",""}
 theme.taglist_text_occupied = {"","","","","","","","","",""}
 theme.taglist_text_focused  = {"","","","","","","","","",""}

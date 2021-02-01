@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/itsco/.config/wpg/wallpapers/jamie-street-XyGq7VvgUhM-unsplash.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0c0804",
+        "foreground": "#d1bda9",
+        "cursor": "#d1bda9"
+    },
+    "colors": {
+        "color0": "#0c0804",
+        "color1": "#565A0F",
+        "color2": "#52482F",
+        "color3": "#6B4D32",
+        "color4": "#6A6153",
+        "color5": "#946847",
+        "color6": "#7A826A",
+        "color7": "#d1bda9",
+        "color8": "#928476",
+        "color9": "#565A0F",
+        "color10": "#52482F",
+        "color11": "#6B4D32",
+        "color12": "#6A6153",
+        "color13": "#946847",
+        "color14": "#7A826A",
+        "color15": "#d1bda9"
+    }
+}

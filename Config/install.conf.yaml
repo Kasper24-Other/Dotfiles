@@ -1,46 +1,71 @@
 - link:
     ~/.config/BetterDiscord:
-      path: /home/itsco/Dotfiles/Config/BetterDiscord
+      path: ~/Dotfiles/Config/BetterDiscord
       create: true
       relink: true
       force: false
     ~/.config/gtk-3.0:
-      path: /home/itsco/Dotfiles/Config/gtk-3.0
+      path: ~/Dotfiles/Config/gtk-3.0
       create: true
       relink: true
       force: false
     ~/.gtkrc-2.0:
-      path: /home/itsco/Dotfiles/Config/gtkrc-2.0
+      path: ~/Dotfiles/Config/gtkrc-2.0
       create: true
       relink: true
       force: false
     ~/.zshrc:
-      path: /home/itsco/Dotfiles/Config/zshrc
+      path: ~/Dotfiles/Config/zshrc
       create: true
       relink: true
       force: false
     ~/.config/alacritty:
-      path: /home/itsco/Dotfiles/Config/alacritty
+      path: ~/Dotfiles/Config/alacritty
       create: true
       relink: true
       force: false
     ~/.config/awesome:
-      path: /home/itsco/Dotfiles/Config/awesome-elenapan
+      path: ~/Dotfiles/Config/awesome-elenapan
       create: true
       relink: true
       force: false
     ~/.config/spicetify:
-      path: /home/itsco/Dotfiles/Config/spicetify
+      path: ~/Dotfiles/Config/spicetify
       create: true
       relink: true
       force: false
     ~/.config/wpg:
-      path: /home/itsco/Dotfiles/Config/wpg
+      path: ~/Dotfiles/Config/wpg
       create: true
       relink: true
       force: false
     ~/.config/OpenRGB:
-      path: /home/itsco/Dotfiles/Config/OpenRGB
+      path: ~/Dotfiles/Config/OpenRGB
+      create: true
+      relink: true
+      force: false
+    ~/.config/picom:
+      path: ~/Dotfiles/Config/picom
+      create: true
+      relink: true
+      force: false
+    ~/.config/rofi:
+      path: ~/Dotfiles/Config/rofi
+      create: true
+      relink: true
+      force: false
+    ~/.fonts:
+      path: ~/Dotfiles/Config/fonts
+      create: true
+      relink: true
+      force: false
+    ~/.Xresources:
+      path: ~/Dotfiles/Config/Xresources
+      create: true
+      relink: true
+      force: false
+    ~/.mozilla/firefox/wg6ilyu3.default-release:
+      path: ~/Dotfiles/Config/
       create: true
       relink: true
       force: false

@@ -22,10 +22,13 @@
             "Corsair 1000D Obsidian": true,
             "Corsair Commander Pro": true,
             "Corsair Dominator Platinum": true,
+            "Corsair Glaive RGB": true,
             "Corsair Glaive RGB PRO": true,
+            "Corsair H100I RGB SE": true,
             "Corsair Harpoon RGB": true,
             "Corsair Harpoon RGB PRO": true,
             "Corsair Hydro Series": true,
+            "Corsair K55 RGB": true,
             "Corsair K65 LUX RGB": true,
             "Corsair K65 RGB": true,
             "Corsair K65 RGB RAPIDFIRE": true,
@@ -54,6 +57,8 @@
             "Corsair Vengeance": true,
             "Corsair Vengeance Pro": true,
             "Crucial": true,
+            "Das Keyboard Q4 RGB": true,
+            "Das Keyboard Q5 RGB": true,
             "Debug Controllers": true,
             "Ducky One 2 RGB TKL": true,
             "Ducky Shine 7/Ducky One 2 RGB": true,
@@ -143,6 +148,7 @@
             "SteelSeries Rival 300 HP Omen Edition": true,
             "SteelSeries Siberia 350": true,
             "Steelseries Apex (OG)/Apex Fnatic/Apex 350": true,
+            "Tecknet M0008": true,
             "Tecknet M008": true,
             "Tecware Phantom Elite": true,
             "Thermaltake Poseidon Z RGB": true,
@@ -163,8 +169,22 @@
             "Thermaltake Riing (PID 0x1FB3)": true,
             "Thermaltake Riing (PID 0x1FB4)": true,
             "Thermaltake Riing (PID 0x1FB5)": true,
-            "Warrior Kane TC235": true
+            "Warrior Kane TC235": true,
+            "Yeelight": true
         }
+    },
+    "E131Devices": {
+        "devices": [
+            {
+                "keepalive_time": 1000,
+                "name": "Desk Strip",
+                "num_leds": 120,
+                "rgb_order": "RGB",
+                "start_channel": 1,
+                "start_universe": 1,
+                "type": "LINEAR"
+            }
+        ]
     },
     "Gigabyte RGB Fusion 2 SMBus": {
         "SupportedDevices": [
@@ -182,19 +202,6 @@
             "X470 AORUS ULTRA GAMING",
             "X470 AORUS ULTRA GAMING-CF",
             "Z370 AORUS Gaming 5-CF"
-        ]
-    },
-    "E131Devices": {
-        "devices": [
-            {
-                "keepalive_time": 1000,
-                "name": "Desk Strip",
-                "num_leds": 120,
-                "rgb_order": "RGB",
-                "start_channel": 1,
-                "start_universe": 1,
-                "type": "LINEAR"
-            }
         ]
     }
 }

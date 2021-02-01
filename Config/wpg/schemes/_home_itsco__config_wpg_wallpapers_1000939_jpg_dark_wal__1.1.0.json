@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/itsco/.config/wpg/wallpapers/1000939.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0A1032",
+        "foreground": "#ffe8e6",
+        "cursor": "#ffe8e6"
+    },
+    "colors": {
+        "color0": "#0A1032",
+        "color1": "#483890",
+        "color2": "#4F9DC9",
+        "color3": "#525AA2",
+        "color4": "#2A5B9E",
+        "color5": "#B16D8F",
+        "color6": "#41A0C6",
+        "color7": "#ebc4c2",
+        "color8": "#111c5c",
+        "color9": "#553bc8",
+        "color10": "#54d1ff",
+        "color11": "#5a68e2",
+        "color12": "#2974da",
+        "color13": "#f87bb9",
+        "color14": "#43d7ff",
+        "color15": "#ffe8e6"
+    }
+}

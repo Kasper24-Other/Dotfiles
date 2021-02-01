@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/itsco/.config/wpg/wallpapers/roberto-motoi-q1Lx8KE5vEo-unsplash.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#101112",
+        "foreground": "#c7c7c5",
+        "cursor": "#c7c7c5"
+    },
+    "colors": {
+        "color0": "#101112",
+        "color1": "#5E6559",
+        "color2": "#897658",
+        "color3": "#608964",
+        "color4": "#978B72",
+        "color5": "#5E7988",
+        "color6": "#748E94",
+        "color7": "#c7c7c5",
+        "color8": "#8b8b89",
+        "color9": "#5E6559",
+        "color10": "#897658",
+        "color11": "#608964",
+        "color12": "#978B72",
+        "color13": "#5E7988",
+        "color14": "#748E94",
+        "color15": "#c7c7c5"
+    }
+}

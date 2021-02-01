@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/itsco/.config/wpg/wallpapers/environment_painting_practice_by_ariabba_art_dec6xpw.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#122625",
+        "foreground": "#dfecf6",
+        "cursor": "#dfecf6"
+    },
+    "colors": {
+        "color0": "#122625",
+        "color1": "#5DA7D3",
+        "color2": "#73B1DA",
+        "color3": "#B0B0B8",
+        "color4": "#98B6D6",
+        "color5": "#AED4F3",
+        "color6": "#E2C7CE",
+        "color7": "#dfecf6",
+        "color8": "#9ca5ac",
+        "color9": "#5DA7D3",
+        "color10": "#73B1DA",
+        "color11": "#B0B0B8",
+        "color12": "#98B6D6",
+        "color13": "#AED4F3",
+        "color14": "#E2C7CE",
+        "color15": "#dfecf6"
+    }
+}
